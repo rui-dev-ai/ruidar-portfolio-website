@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Syed Ruidar Ali Shah (Rui) — AI Engineer & Full-Stack Developer</title>
+<meta name="description" content="Meet Syed Ruidar Ali Shah (Rui) — AI Engineering student, full-stack developer, and Shopify specialist. Learn how he went from building Shopify stores to shipping AI-powered automation for businesses worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Syed Ruidar Ali Shah",
+  "alternateName": "Rui",
+  "url": "https://ruidar.me/",
+  "image": "https://ruidar.me/about-me-original.png",
+  "jobTitle": "AI Engineering Student & Full-Stack Developer",
+  "description": "AI Engineering student and full-stack developer building Shopify stores, web applications, and AI-powered automation for businesses worldwide.",
+  "email": "mailto:contactwithrui@gmail.com",
+  "sameAs": [
+    "https://web.facebook.com/ruiecomexpert",
+    "https://www.instagram.com/rui_ecomexpert/",
+    "https://www.tiktok.com/@ruiecomexpert",
+    "https://www.linkedin.com/in/syed-ruidar-ali-shah-760290379/"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#000000;
+    --panel:#0A0A0A;
+    --panel-border:#1C1C1C;
+    --text:#F2F2F2;
+    --muted:#7A8492;
+    --blue:#00BFFF;
+    --green:#00E676;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background-color:var(--bg);
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:48px 48px;
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+  }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 48px; position:relative; z-index:1; }
+  .highlight{ color:var(--blue); text-shadow:0 0 24px rgba(0,191,255,0.35); }
+
+  /* ===== Nav — exact same as homepage ===== */
+  .nav-wrap{ position:sticky; top:0; z-index:100; padding:16px 24px 0; background:transparent; }
+  .nav{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:14px 28px; max-width:1180px; margin:0 auto; border-radius:22px;
+    background:rgba(11,15,20,0.55); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.07); box-shadow:0 8px 30px rgba(0,0,0,0.25);
+    transition:background 0.3s ease, box-shadow 0.3s ease;
+  }
+  .nav-logo{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:0.5px; text-decoration:none; color:var(--text); }
+  .nav-logo span{ color:var(--blue); }
+  .nav-links{ display:flex; gap:36px; list-style:none; }
+  .nav-links a{ color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; transition:color 0.25s ease; }
+  .nav-links a:hover{ color:var(--text); }
+  .nav-cta{
+    background:transparent; border:1px solid var(--panel-border); color:var(--text);
+    padding:9px 20px; border-radius:6px; font-size:14px; font-weight:500;
+    cursor:pointer; transition:all 0.25s ease; text-decoration:none; display:inline-block;
+  }
+  .nav-cta:hover{ border-color:var(--blue); background:rgba(47,143,255,0.08); }
+  .nav-toggle{ display:none; background:none; border:none; color:var(--text); font-size:22px; cursor:pointer; line-height:1; padding:4px; }
+  .mobile-menu{
+    display:none; flex-direction:column; gap:4px; max-width:1180px; margin:8px auto 0; padding:16px 20px 20px;
+    border-radius:18px; background:rgba(10,10,10,0.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.07); box-shadow:0 8px 30px rgba(0,0,0,0.35);
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{ color:var(--muted); text-decoration:none; font-size:15px; font-weight:500; padding:10px 4px; border-bottom:1px solid rgba(255,255,255,0.06); }
+  .mobile-menu a:last-of-type{ border-bottom:none; }
+  .mobile-menu a:hover{ color:var(--text); }
+  @media (max-width:900px){ .nav-links, .nav-cta{ display:none; } .nav-toggle{ display:block; } }
+
+  /* ===== section-eyebrow (shared pattern) ===== */
+  .section-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--blue);
+    background:rgba(0,191,255,0.08); border:1px solid rgba(0,191,255,0.25);
+    padding:6px 14px; border-radius:20px; margin-bottom:24px;
+  }
+
+  /* ===================================================
+     1. HERO
+     =================================================== */
+  .about-hero{
+    position:relative;
+    padding:70px 0 100px;
+  }
+  .about-hero-inner{
+    position:relative;
+    z-index:1;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .grid-bg{
+    position:absolute; inset:-100px 0 0 0; height:900px;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(ellipse 85% 75% at 50% 30%, black 55%, transparent 100%);
+    z-index:0; pointer-events:none;
+  }
+  .about-hero h1{
+    position:relative; z-index:2;
+    font-family:'Space Grotesk',sans-serif; font-weight:700;
+    font-size:clamp(32px,4.6vw,52px); line-height:1.15; letter-spacing:-1px; margin-bottom:20px;
+  }
+  .about-hero-sub{
+    position:relative; z-index:2;
+    font-size:16px; line-height:1.8; color:var(--muted); max-width:480px;
+  }
+
+  /* 3D tilt portrait */
+  .about-photo-wrap{ position:relative; z-index:2; perspective:1500px; display:flex; justify-content:center; }
+  .about-photo-float{ display:inline-block; }
+  .about-photo-float.idle{ animation:aboutBob 5s ease-in-out infinite; }
+  @keyframes aboutBob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-10px); } }
+  .about-photo-tilt{
+    position:relative; width:380px; max-width:100%; aspect-ratio:2/3;
+    border-radius:26px; transform-style:preserve-3d; will-change:transform;
+    opacity:0; animation:aboutPhotoEntrance 1.1s cubic-bezier(.19,1,.22,1) forwards;
+    transition:transform .15s ease-out;
+  }
+  @keyframes aboutPhotoEntrance{
+    0%{ opacity:0; transform:translateY(40px) rotateY(-22deg) rotateX(8deg) scale(0.86); }
+    100%{ opacity:1; transform:translateY(0) rotateY(0) rotateX(0) scale(1); }
+  }
+  .about-photo-glow{
+    position:absolute; inset:-30px; z-index:-1;
+    background:radial-gradient(circle at 20% 15%, rgba(0,191,255,0.25), transparent 55%),
+               radial-gradient(circle at 85% 90%, rgba(0,230,118,0.2), transparent 55%);
+    filter:blur(30px); border-radius:34px; opacity:.85;
+  }
+  .about-photo-inner{
+    position:absolute; inset:0; border-radius:26px; overflow:hidden;
+    border:1px solid rgba(0,191,255,0.3);
+    box-shadow:0 30px 70px rgba(0,0,0,0.6), 0 0 40px rgba(0,191,255,0.12);
+  }
+  .about-photo-inner img{ width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+  .about-photo-inner::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.75) 100%);
+    pointer-events:none;
+  }
+  .about-photo-shine{
+    position:absolute; inset:0;
+    background:radial-gradient(circle at var(--sx,50%) var(--sy,30%), rgba(255,255,255,0.14), transparent 55%);
+    mix-blend-mode:screen; pointer-events:none; transition:background .15s ease-out; z-index:2;
+  }
+  @media (max-width:900px){
+    .about-hero-inner{ grid-template-columns:1fr; text-align:center; padding:0 24px; }
+    .about-hero{ padding:48px 0 80px; }
+    .about-hero-sub{ margin-left:auto; margin-right:auto; }
+    .about-photo-wrap{ order:-1; }
+  }
+
+  /* ===================================================
+     2. FULL STORY
+     =================================================== */
+  .story{ padding:0 0 110px; }
+  .story-head{ max-width:640px; margin-bottom:40px; }
+  .story-head h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(26px,3.2vw,36px); }
+  .story-body{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px;
+  }
+  .story-body p{ font-size:15px; line-height:1.85; color:var(--muted); margin-bottom:20px; }
+  .story-body p strong{ color:var(--text); font-weight:600; }
+  .story-body h3{
+    font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px;
+    color:var(--text); margin:28px 0 12px; display:flex; align-items:center; gap:8px;
+  }
+  .story-body h3:first-child{ margin-top:0; }
+  .story-body h3::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--blue); box-shadow:0 0 8px var(--blue); }
+  @media (max-width:900px){ .story-body{ grid-template-columns:1fr; gap:8px; } .story-head{ padding:0 24px; } .story-body{ padding:0 24px; } }
+
+  /* ===================================================
+     3. EXTENDED TIMELINE
+     =================================================== */
+  .timeline-section{ padding:0 0 110px; }
+  .timeline-head{ max-width:600px; margin-bottom:56px; }
+  .timeline-head h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(26px,3.2vw,36px); margin-bottom:10px; }
+  .timeline-head p{ color:var(--muted); font-size:15px; line-height:1.7; }
+
+  .timeline{ position:relative; max-width:760px; padding-left:36px; }
+  .timeline::before{
+    content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px;
+    background:linear-gradient(180deg, var(--blue), var(--green));
+    opacity:.35;
+  }
+  .timeline-item{ position:relative; padding-bottom:44px; }
+  .timeline-item:last-child{ padding-bottom:0; }
+  .timeline-dot{
+    position:absolute; left:-36px; top:2px; width:14px; height:14px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--blue); box-shadow:0 0 12px rgba(0,191,255,0.6);
+  }
+  .timeline-item:nth-child(even) .timeline-dot{ border-color:var(--green); box-shadow:0 0 12px rgba(0,230,118,0.6); }
+  .timeline-year{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--blue); margin-bottom:6px; letter-spacing:.3px;
+  }
+  .timeline-item h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:17px; margin-bottom:8px; }
+  .timeline-item p{ color:var(--muted); font-size:14px; line-height:1.7; max-width:560px; }
+  @media (max-width:900px){ .timeline-section{ padding:0 24px 90px; } }
+
+  /* ===================================================
+     4. EDUCATION
+     =================================================== */
+  .education{ padding:0 0 110px; }
+  .education-card{
+    max-width:760px;
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+    border:1px solid var(--panel-border); border-radius:22px; padding:36px 38px;
+  }
+  .education-card h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(24px,3vw,30px); margin-bottom:22px; }
+  .edu-row{ display:flex; gap:20px; align-items:flex-start; }
+  .edu-icon{
+    width:48px; height:48px; border-radius:12px; flex-shrink:0;
+    background:rgba(0,191,255,0.1); border:1px solid rgba(0,191,255,0.3);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .edu-icon svg{ width:22px; height:22px; stroke:var(--blue); fill:none; }
+  .edu-degree{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; margin-bottom:4px; }
+  .edu-school{ color:var(--muted); font-size:14px; margin-bottom:14px; }
+  .edu-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+  .edu-tag{
+    font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--green);
+    background:rgba(0,230,118,0.08); border:1px solid rgba(0,230,118,0.25);
+    padding:5px 12px; border-radius:20px;
+  }
+  @media (max-width:900px){ .education{ padding:0 24px 90px; } .education-card{ padding:28px 24px; } }
+
+  /* ===================================================
+     5. VALUES / HOW I WORK
+     =================================================== */
+  .values{ padding:0 0 110px; }
+  .values-head{ max-width:600px; margin-bottom:40px; }
+  .values-head h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(26px,3.2vw,36px); margin-bottom:10px; }
+  .values-head p{ color:var(--muted); font-size:15px; line-height:1.7; }
+  .values-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
+  .value-card{
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+    border:1px solid var(--panel-border); border-radius:18px; padding:28px 24px;
+    transition:border-color .3s ease, transform .3s ease;
+  }
+  .value-card:hover{ border-color:rgba(0,191,255,0.35); transform:translateY(-4px); }
+  .value-num{
+    font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--blue);
+    margin-bottom:16px; display:block;
+  }
+  .value-card h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16.5px; margin-bottom:10px; }
+  .value-card p{ color:var(--muted); font-size:13.5px; line-height:1.7; }
+  @media (max-width:900px){ .values{ padding:0 24px 90px; } }
+
+  /* ===================================================
+     6. SKILLS LINK-BACK
+     =================================================== */
+  .skills-linkback{ padding:0 0 110px; }
+  .skills-linkback-card{
+    max-width:1084px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--panel-border); border-radius:20px; padding:32px 36px;
+  }
+  .skills-linkback-card h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; margin-bottom:6px; }
+  .skills-linkback-card p{ color:var(--muted); font-size:14px; }
+  .skills-linkback-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:transparent; border:1px solid var(--panel-border); color:var(--text);
+    text-decoration:none; padding:12px 22px; border-radius:30px; font-size:13.5px; font-weight:500;
+    transition:border-color .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .skills-linkback-btn:hover{ border-color:var(--blue); background:rgba(0,191,255,0.08); }
+  @media (max-width:900px){ .skills-linkback{ padding:0 24px 90px; } }
+
+  /* ===================================================
+     7. CTA
+     =================================================== */
+  .about-cta{ padding:0 0 110px; text-align:center; }
+  .about-cta h2{
+    font-family:'Space Grotesk',sans-serif; font-weight:700;
+    font-size:clamp(26px,3.6vw,40px); margin-bottom:24px;
+  }
+  .about-cta-btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--blue); color:#000; font-weight:600; font-size:15px;
+    text-decoration:none; padding:16px 34px; border-radius:40px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .about-cta-btn:hover{ transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,191,255,0.3); }
+  .about-cta-btn svg{ width:15px; height:15px; stroke:#000; }
+
+  /* ===== Footer — exact same as homepage ===== */
+  .site-footer{
+    position:relative; background:rgba(11,15,20,0.55);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-top:1px solid rgba(255,255,255,0.07); padding:64px 48px 32px;
+  }
+  .footer-inner{ max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+  .footer-brand .nav-logo{ margin-bottom:16px; display:inline-block; }
+  .footer-about{ font-size:14px; line-height:1.7; color:var(--muted); max-width:320px; margin-bottom:20px; }
+  .footer-contact{ display:flex; flex-direction:column; gap:10px; }
+  .footer-contact a{ display:inline-flex; align-items:center; gap:8px; color:var(--muted); text-decoration:none; font-size:13.5px; transition:color 0.25s ease; }
+  .footer-contact a:hover{ color:var(--blue); }
+  .footer-contact svg{ width:14px; height:14px; flex-shrink:0; }
+  .footer-social{ display:flex; gap:10px; margin-top:20px; }
+  .social-icon{
+    width:38px; height:38px; border-radius:10px; border:1px solid var(--panel-border);
+    display:flex; align-items:center; justify-content:center; color:var(--muted);
+    transition:border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  }
+  .social-icon svg{ width:19px; height:19px; }
+  .social-icon:hover{ border-color:var(--blue); color:var(--blue); transform:translateY(-2px); }
+  .footer-col h4{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:var(--text); margin-bottom:18px; }
+  .footer-col ul{ list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .footer-col a{ color:var(--muted); text-decoration:none; font-size:13.5px; transition:color 0.25s ease; }
+  .footer-col a:hover{ color:var(--blue); }
+  .footer-bottom{
+    max-width:1280px; margin:0 auto; padding-top:28px; border-top:1px solid var(--panel-border);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    font-size:12.5px; color:var(--muted);
+  }
+  @media (max-width:900px){ .site-footer{ padding:48px 24px 24px; } .footer-inner{ grid-template-columns:1fr; gap:36px; } }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV (exact same component as homepage) ============ -->
+<div class="nav-wrap">
+<nav class="nav">
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <a href="https://ruidar.me/" class="nav-logo">RUI<span>DAR</span></a>
+  <ul class="nav-links">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="https://ruidar.me/#services">Services</a></li>
+    <li><a href="https://ruidar.me/#work">Portfolio</a></li>
+    <li><a href="https://ruidar.me/#testimonials">Client Feedback</a></li>
+  </ul>
+  <a href="/contact.html" class="nav-cta">Get in Touch</a>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/about.html">About</a>
+  <a href="https://ruidar.me/#services">Services</a>
+  <a href="https://ruidar.me/#work">Portfolio</a>
+  <a href="https://ruidar.me/#testimonials">Client Feedback</a>
+</div>
+</div>
+
+<!-- ============ 1. HERO ============ -->
+<section class="about-hero">
+  <div class="grid-bg"></div>
+  <div class="about-hero-inner">
+    <div>
+      <div class="section-eyebrow"><span class="dot"></span> ABOUT ME</div>
+      <h1>The person behind <span class="highlight">the code.</span></h1>
+      <p class="about-hero-sub">
+        I'm Rui — and before I was building AI systems, I was just someone curious about why some websites made people buy and others didn't. That question turned into a career, a small team, and a degree I'm still working through. Here's the fuller story.
+      </p>
+    </div>
+
+    <div class="about-photo-wrap">
+      <div class="about-photo-float" id="aboutPhotoFloat">
+        <div class="about-photo-tilt" id="aboutPhotoTilt">
+          <div class="about-photo-glow"></div>
+          <div class="about-photo-inner">
+            <img src="about-me-original.png" alt="Syed Ruidar Ali Shah (Rui) — AI Engineer and Full-Stack Developer">
+            <div class="about-photo-shine" id="aboutPhotoShine"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. FULL STORY ============ -->
+<section class="story">
+  <div class="wrap">
+    <div class="story-head">
+      <div class="section-eyebrow" style="color:var(--green); background:rgba(0,230,118,0.08); border-color:rgba(0,230,118,0.25);">MY STORY</div>
+      <h2>From Shopify stores to <span class="highlight">intelligent systems.</span></h2>
+    </div>
+
+    <div class="story-body">
+      <div>
+        <h3>Where it started</h3>
+        <p>
+          I got into this world through <strong>Shopify development and digital marketing</strong> — building stores and running Meta Ads for clients, mostly across the US, UK, and Europe. It wasn't glamorous work at first: a lot of it was trial and error, figuring out why one product page converted and an almost-identical one didn't.
+        </p>
+        <p>
+          The real turning point was realizing that <strong>design alone doesn't sell</strong> — the store has to be built around how people actually decide to buy. Once that clicked, client results started compounding, and word of mouth did the rest.
+        </p>
+
+        <h3>Moving into full-stack + AI</h3>
+        <p>
+          As client requests got more ambitious — custom checkout flows, integrations Shopify couldn't handle out of the box, dashboards clients wanted to actually use — I moved into <strong>full-stack web development</strong>. That opened the door to building complete custom applications instead of working within a platform's limits.
+        </p>
+        <p>
+          From there, adding <strong>AI-powered features</strong> felt like a natural next step rather than a pivot — automating the repetitive parts of a business (support replies, lead qualification, reporting) so the people running it could focus on the parts that actually needed a human.
+        </p>
+      </div>
+
+      <div>
+        <h3>Why AI, specifically</h3>
+        <p>
+          I'm currently pursuing a <strong>Bachelor's in Artificial Intelligence</strong>. What drew me to it wasn't the hype — it was watching how much time small businesses lose to manual, repeatable work. AI isn't interesting to me as a buzzword; it's interesting as a way to give a two-person team the leverage of a ten-person team.
+        </p>
+        <p>
+          Studying it formally has also changed how I build — I'm less interested in wiring up a flashy demo and more interested in systems that hold up under real usage, edge cases and all.
+        </p>
+
+        <h3>What I actually care about</h3>
+        <p>
+          Every project I take on has to answer one question: <strong>does this make the business more money, more efficient, or both?</strong> If a feature looks impressive but doesn't move that needle, I'll say so — even if it means pushing back on the original brief.
+        </p>
+
+        <h3>Working with a team</h3>
+        <p>
+          I lead a small team that helps deliver full-stack and WordPress projects at scale, while I personally focus on Shopify architecture, AI automation, and the overall strategy. I stay closely involved in every project — clients work directly with me, not a rotating cast of account managers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. EXTENDED TIMELINE ============ -->
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="timeline-head">
+      <div class="section-eyebrow">THE JOURNEY</div>
+      <h2>How it's <span class="highlight">unfolded.</span></h2>
+      <p>The short version, stage by stage.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 01</div>
+        <h3>First Shopify builds</h3>
+        <p>Started designing and launching Shopify stores for early clients, learning conversion-focused design through direct, hands-on iteration rather than theory.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 02</div>
+        <h3>Meta Ads + performance marketing</h3>
+        <p>Took on ad management alongside store builds — connecting the dots between what gets a visitor to a page and what actually gets them to buy.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 03</div>
+        <h3>Client base expands internationally</h3>
+        <p>Started working with clients across the US, UK, and Europe, adapting to different markets, expectations, and communication styles.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 04</div>
+        <h3>Full-stack development</h3>
+        <p>Moved beyond Shopify's platform limits into custom web applications — building the specific tools and flows clients actually needed.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 05</div>
+        <h3>Started BS in Artificial Intelligence</h3>
+        <p>Began formal AI studies to back up hands-on automation work with real theoretical grounding — machine learning, systems design, and applied AI.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 06</div>
+        <h3>AI-powered automation for clients</h3>
+        <p>Started shipping real automation systems for businesses — support agents, workflow automation, and AI features built directly into client applications.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">STAGE 07</div>
+        <h3>Building a team</h3>
+        <p>Brought on a small team to handle full-stack and WordPress projects at scale, while staying personally involved in every client relationship.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">TODAY</div>
+        <h3>Where things stand now</h3>
+        <p>199+ projects shipped, 99+ clients served, a small team, and a growing focus on AI systems that do real work — not just demos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. EDUCATION ============ -->
+<section class="education">
+  <div class="wrap">
+    <div class="education-card">
+      <h2>Education</h2>
+      <div class="edu-row">
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg>
+        </div>
+        <div>
+          <div class="edu-degree">Bachelor's in Artificial Intelligence <span style="color:var(--muted); font-weight:400;">— In Progress</span></div>
+          <div class="edu-school">[University Name] · Expected [Graduation Year]</div>
+          <div class="edu-tags">
+            <span class="edu-tag">Machine Learning</span>
+            <span class="edu-tag">Neural Networks</span>
+            <span class="edu-tag">Applied AI Systems</span>
+            <span class="edu-tag">Data Structures &amp; Algorithms</span>
+            <span class="edu-tag">Automation &amp; Agents</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. VALUES / HOW I WORK ============ -->
+<section class="values">
+  <div class="wrap">
+    <div class="values-head">
+      <div class="section-eyebrow" style="color:var(--green); background:rgba(0,230,118,0.08); border-color:rgba(0,230,118,0.25);">HOW I WORK</div>
+      <h2>Principles I actually <span class="highlight">operate by.</span></h2>
+      <p>Not a mission-statement wall — just how projects with me tend to go.</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-num">01</span>
+        <h3>Communication first</h3>
+        <p>You'll know where your project stands without having to chase me for an update. Clear, direct communication over polished silence.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-num">02</span>
+        <h3>Ship real systems, not demos</h3>
+        <p>If it can't hold up under actual daily use, it's not done. I build for the messy edge cases, not just the happy path.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-num">03</span>
+        <h3>Long-term thinking over quick wins</h3>
+        <p>I'd rather build something that still makes sense in a year than something that just looks good in the first demo call.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-num">04</span>
+        <h3>Push back when it matters</h3>
+        <p>If a request won't actually help your business, I'll tell you — and suggest what will. You're paying for judgment, not just execution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. SKILLS (link back to homepage) ============ -->
+<section class="skills-linkback">
+  <div class="skills-linkback-card">
+    <div>
+      <h3>Want the full skills breakdown?</h3>
+      <p>Shopify, full-stack, AI automation, and marketing — with the same animated progress view from the homepage.</p>
+    </div>
+    <a href="https://ruidar.me/#skills" class="skills-linkback-btn">
+      View Skills
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 7. CTA ============ -->
+<section class="about-cta">
+  <div class="wrap">
+    <h2>Like what you see? <span class="highlight">Let's talk.</span></h2>
+    <a href="/contact.html" class="about-cta-btn">
+      Get in Touch
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER (exact same component as homepage) ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="https://ruidar.me/" class="nav-logo">RUI<span>DAR</span></a>
+      <p class="footer-about">Syed Ruidar Ali Shah — AI Engineering student and full-stack developer building Shopify stores, web applications, and AI-powered automation for businesses worldwide.</p>
+      <div class="footer-contact">
+        <a href="mailto:contactwithrui@gmail.com">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          contactwithrui@gmail.com
+        </a>
+        <a href="https://wa.me/923489907761" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.892 6.994c-.003 5.45-4.437 9.884-9.884 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +92 348 9907761
+        </a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://web.facebook.com/ruiecomexpert" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/rui_ecomexpert/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@ruiecomexpert?lang=en" target="_blank" rel="noopener" aria-label="TikTok" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3v13.5a2.5 2.5 0 11-2.5-2.5c.17 0 .34.02.5.05V9.9a5.5 5.5 0 105.5 5.5V8.2a7.5 7.5 0 004.5 1.5V6.7a4.5 4.5 0 01-4.5-4.5V2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/syed-ruidar-ali-shah-760290379/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.01 2 2 0 014 .01zM7 8.48H3V21h4V8.48zM13.32 8.48H9.34V21h3.98v-6.4c0-3.37 4.4-3.65 4.4 0V21H21.7v-7.93c0-6.17-6.79-5.94-8.38-2.9V8.48z"/></svg>
+        </a>
+        <a href="https://wa.me/923489907761" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.892 6.994c-.003 5.45-4.437 9.884-9.884 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="mailto:contactwithrui@gmail.com" aria-label="Email" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/about.html#story">Experience</a></li>
+        <li><a href="https://ruidar.me/#testimonials">Client Feedback</a></li>
+        <li><a href="https://ruidar.me/#">Blog</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Payment Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Rui (Syed Ruidar Ali Shah). All rights reserved.</span>
+    <span>Designed &amp; built by Rui</span>
+  </div>
+</footer>
+
+<script>
+  // ===== Mobile nav toggle (exact same logic as homepage) =====
+  (function(){
+    const navToggle = document.getElementById("navToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener("click", function () {
+        const isOpen = mobileMenu.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        navToggle.textContent = isOpen ? "✕" : "☰";
+      });
+      mobileMenu.querySelectorAll("a, button").forEach(function (el) {
+        el.addEventListener("click", function () {
+          mobileMenu.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.textContent = "☰";
+        });
+      });
+    }
+  })();
+
+  // ===== 3D tilt about photo =====
+  (function(){
+    const floatEl = document.getElementById('aboutPhotoFloat');
+    const tiltEl  = document.getElementById('aboutPhotoTilt');
+    const shineEl = document.getElementById('aboutPhotoShine');
+
+    tiltEl.addEventListener('animationend', () => floatEl.classList.add('idle'), { once:true });
+
+    const maxTilt = 12;
+    tiltEl.addEventListener('mousemove', (e) => {
+      floatEl.classList.remove('idle');
+      const rect = tiltEl.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * (maxTilt * 2);
+      const rotateX = (0.5 - y) * (maxTilt * 2);
+      tiltEl.style.transform = `translateY(0) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.03)`;
+      shineEl.style.setProperty('--sx', (x * 100) + '%');
+      shineEl.style.setProperty('--sy', (y * 100) + '%');
+    });
+    tiltEl.addEventListener('mouseleave', () => {
+      tiltEl.style.transform = 'translateY(0) rotateY(0) rotateX(0) scale(1)';
+      setTimeout(() => floatEl.classList.add('idle'), 200);
+    });
+  })();
+</script>
+
+</body>
+</html>
