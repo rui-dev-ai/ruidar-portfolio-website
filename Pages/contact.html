@@ -7,6 +7,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Rui — AI Engineer & Shopify Developer | Get a Quote</title>
 <meta name="description" content="Get in touch with Rui — Shopify developer, full-stack engineer, and AI automation specialist working with clients across the US, UK, Europe, and the Middle East. Usually replies within a few hours.">
+<link rel="canonical" href="https://ruidar.me/Pages/contact.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Rui — Shopify Developer & AI Engineer">
+<meta property="og:description" content="Get in touch with Rui — Shopify developer, full-stack engineer, and AI automation specialist working with clients across the US, UK, Europe, and the Middle East.">
+<meta property="og:url" content="https://ruidar.me/Pages/contact.html">
+<meta property="og:image" content="https://ruidar.me/Conact%20us%20page%20image%20.png">
+<meta property="og:site_name" content="Rui — Syed Ruidar Ali Shah">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Rui — Shopify Developer & AI Engineer">
+<meta name="twitter:description" content="Get in touch with Rui for Shopify, full-stack, and AI automation projects. Usually replies within a few hours.">
+<meta name="twitter:image" content="https://ruidar.me/Conact%20us%20page%20image%20.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Rui — Shopify Developer & AI Engineer",
+  "url": "https://ruidar.me/Pages/contact.html",
+  "description": "Get in touch with Rui — Shopify developer, full-stack engineer, and AI automation specialist.",
+  "about": {
+    "@type": "Person",
+    "name": "Syed Ruidar Ali Shah",
+    "alternateName": ["Rui", "RUIDAR", "RuiEcomExpert"],
+    "email": "mailto:contactwithrui@gmail.com"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -120,13 +149,19 @@
     position:relative;
     width:340px;
     max-width:100%;
-    aspect-ratio:3/4;
     border-radius:26px;
     transform-style:preserve-3d;
     will-change:transform;
     opacity:0;
     animation:heroPhotoEntrance 1.1s cubic-bezier(.19,1,.22,1) forwards;
     transition:transform .15s ease-out;
+  }
+  /* Padding-based aspect ratio (3:4) — more reliable across mobile browsers
+     than the aspect-ratio property when combined with 3D transforms */
+  .hero-photo-tilt::before{
+    content:"";
+    display:block;
+    padding-top:133.333%;
   }
   @keyframes heroPhotoEntrance{
     0%{ opacity:0; transform:translateY(40px) rotateY(-22deg) rotateX(8deg) scale(0.86); }
