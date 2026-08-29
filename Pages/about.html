@@ -149,15 +149,22 @@
   }
 
   /* 3D tilt portrait */
-  .about-photo-wrap{ position:relative; z-index:2; perspective:1500px; display:flex; justify-content:center; }
+  .about-photo-wrap{ position:relative; z-index:2; perspective:1500px; display:flex; justify-content:center; overflow:hidden; }
   .about-photo-float{ display:inline-block; }
   .about-photo-float.idle{ animation:aboutBob 5s ease-in-out infinite; }
   @keyframes aboutBob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-10px); } }
   .about-photo-tilt{
-    position:relative; width:380px; max-width:100%; aspect-ratio:2/3;
+    position:relative; width:380px; max-width:100%;
     border-radius:26px; transform-style:preserve-3d; will-change:transform;
     opacity:0; animation:aboutPhotoEntrance 1.1s cubic-bezier(.19,1,.22,1) forwards;
     transition:transform .15s ease-out;
+  }
+  /* Padding-based aspect ratio (2:3) — more reliable across mobile browsers
+     than the aspect-ratio property when combined with 3D transforms */
+  .about-photo-tilt::before{
+    content:"";
+    display:block;
+    padding-top:150%;
   }
   @keyframes aboutPhotoEntrance{
     0%{ opacity:0; transform:translateY(40px) rotateY(-22deg) rotateX(8deg) scale(0.86); }
