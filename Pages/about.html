@@ -148,27 +148,24 @@
     font-size:16px; line-height:1.8; color:var(--muted); max-width:480px;
   }
 
-  /* 3D tilt portrait */
-  .about-photo-wrap{ position:relative; z-index:2; perspective:1500px; display:flex; justify-content:center; overflow:hidden; }
-  .about-photo-float{ display:inline-block; }
-  .about-photo-float.idle{ animation:aboutBob 5s ease-in-out infinite; }
-  @keyframes aboutBob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-10px); } }
+  /* Simple static portrait (matches homepage style) */
+  .about-photo-wrap{ position:relative; z-index:2; display:flex; justify-content:center; overflow:hidden; }
   .about-photo-tilt{
     position:relative; width:380px; max-width:100%;
-    border-radius:26px; transform-style:preserve-3d; will-change:transform;
-    opacity:0; animation:aboutPhotoEntrance 1.1s cubic-bezier(.19,1,.22,1) forwards;
-    transition:transform .15s ease-out;
+    border-radius:26px;
+    opacity:0;
+    animation:aboutPhotoEntrance 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+    animation-delay:0.1s;
   }
-  /* Padding-based aspect ratio (2:3) — more reliable across mobile browsers
-     than the aspect-ratio property when combined with 3D transforms */
+  /* Padding-based aspect ratio (2:3) — reliable across all mobile browsers */
   .about-photo-tilt::before{
     content:"";
     display:block;
     padding-top:150%;
   }
   @keyframes aboutPhotoEntrance{
-    0%{ opacity:0; transform:translateY(40px) rotateY(-22deg) rotateX(8deg) scale(0.86); }
-    100%{ opacity:1; transform:translateY(0) rotateY(0) rotateX(0) scale(1); }
+    from{ opacity:0; transform:translateY(40px) scale(0.96); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
   }
   .about-photo-glow{
     position:absolute; inset:-30px; z-index:-1;
@@ -186,11 +183,6 @@
     content:""; position:absolute; inset:0;
     background:linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.75) 100%);
     pointer-events:none;
-  }
-  .about-photo-shine{
-    position:absolute; inset:0;
-    background:radial-gradient(circle at var(--sx,50%) var(--sy,30%), rgba(255,255,255,0.14), transparent 55%);
-    mix-blend-mode:screen; pointer-events:none; transition:background .15s ease-out; z-index:2;
   }
   @media (max-width:900px){
     .about-hero-inner{ grid-template-columns:1fr; text-align:center; padding:0 24px; }
@@ -387,15 +379,13 @@
     </div>
 
     <div class="about-photo-wrap">
-      <div class="about-photo-float" id="aboutPhotoFloat">
-        <div class="about-photo-tilt" id="aboutPhotoTilt">
-          <div class="about-photo-glow"></div>
-          <div class="about-photo-inner">
-            <img src="/About%20me%20.png" alt="Syed Ruidar Ali Shah (Rui) — AI Engineer and Full-Stack Developer">
-            <div class="about-photo-shine" id="aboutPhotoShine"></div>
-          </div>
+      <div class="about-photo-tilt">
+        <div class="about-photo-glow"></div>
+        <div class="about-photo-inner">
+          <img src="/About%20me%20.png" alt="Syed Ruidar Ali Shah (Rui) — AI Engineer and Full-Stack Developer">
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -625,32 +615,6 @@
         });
       });
     }
-  })();
-
-  // ===== 3D tilt about photo =====
-  (function(){
-    const floatEl = document.getElementById('aboutPhotoFloat');
-    const tiltEl  = document.getElementById('aboutPhotoTilt');
-    const shineEl = document.getElementById('aboutPhotoShine');
-
-    tiltEl.addEventListener('animationend', () => floatEl.classList.add('idle'), { once:true });
-
-    const maxTilt = 12;
-    tiltEl.addEventListener('mousemove', (e) => {
-      floatEl.classList.remove('idle');
-      const rect = tiltEl.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
-      const rotateY = (x - 0.5) * (maxTilt * 2);
-      const rotateX = (0.5 - y) * (maxTilt * 2);
-      tiltEl.style.transform = `translateY(0) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.03)`;
-      shineEl.style.setProperty('--sx', (x * 100) + '%');
-      shineEl.style.setProperty('--sy', (y * 100) + '%');
-    });
-    tiltEl.addEventListener('mouseleave', () => {
-      tiltEl.style.transform = 'translateY(0) rotateY(0) rotateX(0) scale(1)';
-      setTimeout(() => floatEl.classList.add('idle'), 200);
-    });
   })();
 </script>
 
