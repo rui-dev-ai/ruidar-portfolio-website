@@ -137,35 +137,26 @@
   .hero-meta-item svg{ width:16px; height:16px; stroke:var(--blue); flex-shrink:0; }
   .hero-meta-item b{ color:var(--text); font-weight:600; }
 
-  /* 3D tilt portrait card — same treatment as homepage hero photo */
-  .hero-photo-wrap{ perspective:1400px; display:flex; justify-content:center; overflow:hidden; }
-  .hero-photo-float{ display:inline-block; }
-  .hero-photo-float.idle{ animation:heroBob 4.8s ease-in-out infinite; }
-  @keyframes heroBob{
-    0%,100%{ transform:translateY(0); }
-    50%{ transform:translateY(-10px); }
-  }
+  /* Simple static portrait (matches homepage style) */
+  .hero-photo-wrap{ display:flex; justify-content:center; overflow:hidden; }
   .hero-photo-tilt{
     position:relative;
     width:340px;
     max-width:100%;
     border-radius:26px;
-    transform-style:preserve-3d;
-    will-change:transform;
     opacity:0;
-    animation:heroPhotoEntrance 1.1s cubic-bezier(.19,1,.22,1) forwards;
-    transition:transform .15s ease-out;
+    animation:heroPhotoEntrance 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+    animation-delay:0.1s;
   }
-  /* Padding-based aspect ratio (3:4) — more reliable across mobile browsers
-     than the aspect-ratio property when combined with 3D transforms */
+  /* Padding-based aspect ratio (3:4) — reliable across all mobile browsers */
   .hero-photo-tilt::before{
     content:"";
     display:block;
     padding-top:133.333%;
   }
   @keyframes heroPhotoEntrance{
-    0%{ opacity:0; transform:translateY(40px) rotateY(-22deg) rotateX(8deg) scale(0.86); }
-    100%{ opacity:1; transform:translateY(0) rotateY(0) rotateX(0) scale(1); }
+    from{ opacity:0; transform:translateY(40px) scale(0.96); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
   }
   .hero-photo-glow{
     position:absolute; inset:-30px; z-index:-1;
@@ -186,11 +177,6 @@
     position:absolute; inset:0;
     background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.85) 100%);
     pointer-events:none;
-  }
-  .hero-photo-shine{
-    position:absolute; inset:0;
-    background:radial-gradient(circle at var(--sx,50%) var(--sy,30%), rgba(255,255,255,0.14), transparent 55%);
-    mix-blend-mode:screen; pointer-events:none; transition:background .15s ease-out; z-index:2;
   }
 
   @media (max-width:900px){
@@ -485,14 +471,10 @@
     </div>
 
     <div class="hero-photo-wrap">
-      <div class="hero-photo-float" id="heroPhotoFloat">
-        <div class="hero-photo-tilt" id="heroPhotoTilt">
-          <div class="hero-photo-glow"></div>
-          <div class="hero-photo-inner">
-            <!-- replace src with "Conact us page image .png" from the repo root -->
-            <img src="/Conact%20us%20page%20image%20.png" alt="Rui">
-            <div class="hero-photo-shine" id="heroPhotoShine"></div>
-          </div>
+      <div class="hero-photo-tilt">
+        <div class="hero-photo-glow"></div>
+        <div class="hero-photo-inner">
+          <img src="/Conact%20us%20page%20image%20.png" alt="Rui">
         </div>
       </div>
     </div>
@@ -645,32 +627,6 @@
         });
       });
     }
-  })();
-
-  // ===== 3D tilt hero photo (same technique as homepage) =====
-  (function(){
-    const floatEl = document.getElementById('heroPhotoFloat');
-    const tiltEl  = document.getElementById('heroPhotoTilt');
-    const shineEl = document.getElementById('heroPhotoShine');
-
-    tiltEl.addEventListener('animationend', () => floatEl.classList.add('idle'), { once:true });
-
-    const maxTilt = 12;
-    tiltEl.addEventListener('mousemove', (e) => {
-      floatEl.classList.remove('idle');
-      const rect = tiltEl.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
-      const rotateY = (x - 0.5) * (maxTilt * 2);
-      const rotateX = (0.5 - y) * (maxTilt * 2);
-      tiltEl.style.transform = `translateY(0) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.03)`;
-      shineEl.style.setProperty('--sx', (x * 100) + '%');
-      shineEl.style.setProperty('--sy', (y * 100) + '%');
-    });
-    tiltEl.addEventListener('mouseleave', () => {
-      tiltEl.style.transform = 'translateY(0) rotateY(0) rotateX(0) scale(1)';
-      setTimeout(() => floatEl.classList.add('idle'), 200);
-    });
   })();
 
   // ===== Contact form -> mailto submission =====
